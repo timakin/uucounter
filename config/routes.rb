@@ -4,6 +4,6 @@ end
 
 UUCounter::Engine.routes.draw do
     scope module: "uu_counter" do
-        resources :track, only: [:create]
+        resources :tracks, only: [:create]
     end
 end
