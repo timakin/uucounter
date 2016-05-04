@@ -1,11 +1,11 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "uucounter/version"
+require "uu_counter/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "uucounter"
+  s.name        = "uu_counter"
   s.version     = UUCounter::VERSION
   s.authors     = ["timakin"]
   s.email       = ["timaki.st@gmail.com"]

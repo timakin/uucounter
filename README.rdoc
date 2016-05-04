@@ -10,13 +10,13 @@ It is inspired by [Ahoy](https://github.com/ankane/ahoy), but limited to a few f
 In your Gemfile,
 
 ```
-gem 'uucounter'
+gem 'uu_counter'
 ```
 
-After installation, Generate uucounter libs in your project.
+After installation, Generate uu_counter libs in your project.
 
 ```
-rails g uucounter
+rails g uu_counter
 ```
 
 ## Overview
