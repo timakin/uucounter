@@ -13,10 +13,10 @@ In your Gemfile,
 gem 'uu_counter'
 ```
 
-After installation, Generate uu_counter libs in your project.
+After installation, copy the migration files to your project.
 
 ```
-rails g uu_counter
+rake uu_counter:install:migrations
 ```
 
 ## Overview
@@ -32,11 +32,10 @@ created_at: datetime
 updated_at: datetime
 ```
 
-UUCounter API provides 2 main methods to check and set access track.
+You can get the count of UU in the specified path through a module function.
 
 ```
-UUCounter#get_count(path): Returns UU count to the path
-UUCounter#track(): Track pageview with uu token and path information
+UUCounter::Accessor#get_count(path): Returns UU count to the path
 ```
 
 ## Usage
@@ -56,7 +55,7 @@ After that, when you check UU count, you can get it with following code.
 class TestController < ActionController::Base
     ...
     def foo
-        @pageview_count = UUCounter.get_count("/test/path")
+        @pageview_count = UUCounter::Accessor.get_count("/test/path")
     end
     ...
 end

@@ -21,11 +21,11 @@ function getCookie() {
 }
 
 var UUCounter = {
-    var storedUUID = getCookie();
     track: function() {
+    var storedUUID = getCookie();
         if (storedUUID) {
-            $.ajax.sendRequest('POST', '/uu_counter/track', function(res) {
-                // uu_counter tracked user access.
+            $.post('/uu_counter/track', {}, function(res) {
+                console.log(res);
             });
         }
     }
