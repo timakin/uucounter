@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module UUCounter
-  class PageViewTrackTest < ActiveSupport::TestCase
+  class TrackTest < ActiveSupport::TestCase
     # test "the truth" do
     #   assert true
     # end
