@@ -1,5 +1,5 @@
-module Uucounter
+module UUCounter
   class Engine < ::Rails::Engine
-    isolate_namespace Uucounter
+    isolate_namespace UUCounter
   end
 end

@@ -1,2 +1,2 @@
-Uucounter::Engine.routes.draw do
+UUCounter::Engine.routes.draw do
 end

@@ -6,12 +6,12 @@ require "uucounter/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "uucounter"
-  s.version     = Uucounter::VERSION
+  s.version     = UUCounter::VERSION
   s.authors     = ["timakin"]
   s.email       = ["timaki.st@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Uucounter."
-  s.description = "TODO: Description of Uucounter."
+  s.homepage    = "https://github.com/timakin/uucounter"
+  s.summary     = "UUCounter is the plugin to trace unique user pageviews with easy integration."
+  s.description = "UUCounter is the plugin to trace unique user pageviews with easy integration. It is inspired by [Ahoy](https://github.com/ankane/ahoy), but limited to a few functions for simplicity."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.2.6"
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "mysql2"
 end

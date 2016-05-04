@@ -1,3 +1,66 @@
-= Uucounter
+= [WIP] UUCounter
+
+## Overview
+
+UUCounter is the plugin to trace unique user pageviews with easy integration.
+It is inspired by [Ahoy](https://github.com/ankane/ahoy), but limited to a few functions for simplicity.
+
+## Installation
+
+In your Gemfile,
+
+```
+gem 'uucounter'
+```
+
+After installation, Generate uucounter libs in your project.
+
+```
+rails g uucounter
+```
+
+## Overview
+
+This command will generate pageview tracing model.
+Table schema is...
+
+```
+id:   integer
+uuid: string
+path: string
+created_at: datetime
+updated_at: datetime
+```
+
+UUCounter API provides 2 main methods to check and set access track.
+
+```
+UUCounter#get_count(path): Returns UU count to the path
+UUCounter#track(): Track pageview with uu token and path information
+```
+
+## Usage
+
+In the page you'd track pageview, you should embed this js script.
+
+```
+$(function(){
+    UUCounter.track();
+});
+```
+
+And you must assign schema to your database with `db:migrate`
+After that, when you check UU count, you can get it with following code.
+
+```
+class TestController < ActionController::Base
+    ...
+    def foo
+        @pageview_count = UUCounter.get_count("/test/path")
+    end
+    ...
+end
+```
 
 This project rocks and uses MIT-LICENSE.
+

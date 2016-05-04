@@ -1,4 +1,4 @@
 require "uucounter/engine"
 
-module Uucounter
+module UUCounter
 end

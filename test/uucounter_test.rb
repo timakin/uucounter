@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class UucounterTest < ActiveSupport::TestCase
+class UUCounterTest < ActiveSupport::TestCase
   test "truth" do
-    assert_kind_of Module, Uucounter
+    assert_kind_of Module, UUCounter
   end
 end

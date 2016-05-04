@@ -1,4 +1,4 @@
-module Uucounter
+module UUCounter
   module ApplicationHelper
   end
 end
