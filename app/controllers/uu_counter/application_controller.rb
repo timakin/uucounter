@@ -1,6 +1,8 @@
 module UUCounter
   class ApplicationController < ActionController::Base
     protect_from_forgery with: :exception
+    layout "application"
+    
     before_filter :fill_cookie
 
     def fill_cookie
