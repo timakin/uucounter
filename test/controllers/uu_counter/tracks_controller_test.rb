@@ -1,6 +1,6 @@
 require 'test_helper'
 
-module UUCounter
+module UuCounter
   class TracksControllerTest < ActionController::TestCase
     setup do
       @routes = Engine.routes

@@ -1,4 +1,4 @@
-module UUCounter
+module UuCounter
     module Accessor
         module_function
 

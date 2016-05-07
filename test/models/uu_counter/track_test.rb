@@ -1,6 +1,6 @@
 require 'test_helper'
 
-module UUCounter
+module UuCounter
   class TrackTest < ActiveSupport::TestCase
     # test "the truth" do
     #   assert true

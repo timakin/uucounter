@@ -40,6 +40,12 @@ UUCounter::Accessor#get_count(path): Returns UU count to the path
 
 ## Usage
 
+At first, write this line on your project's config/routes.rb.
+
+```
+mount UuCounter::Engine => "/uu_counter"
+```
+
 In the page you'd track pageview, you should embed this js script.
 
 ```

@@ -3,7 +3,7 @@
 
 var UUCounter = {
     track: function() {
-        $.post('/uu_counter/uuc_tracks', {}, function(res) {
+        $.post('/uuc_tracks', {}, function(res) {
             console.log(res);
         });
     }
