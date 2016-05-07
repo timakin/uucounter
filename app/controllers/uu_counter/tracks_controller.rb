@@ -7,18 +7,17 @@ module UuCounter
         path   = get_fullpath
         track = Track.find_or_initialize_by(uuid: uuid, path: path) do |t|
         	t.uuid = uuid
-        	t.path = path
+        	t.path = path 
         end
         if track.new_record?
-        	p track
-            if track.save
-                render json: { 'status': 'The access track was successfully saved.' }
-            else
-                render json: { 'status': "The access track couldn't be saved."}
-            end
-        else
-        	render json: { 'status': "The access is alreadly exists." }
-        end
+	    	if track.save
+	       	    render json: { 'status': 'The access track was successfully saved.' }
+	        else
+	            render json: { 'status': "The access track couldn't be saved."}
+	        end
+	   else
+	   		render json: { 'status': "The access is alreadly exists." }
+	   end
     end
   end
 end

@@ -3374,3 +3374,263 @@ Processing by UuCounter::TracksController#create as */*
   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "uu_counter_tracks" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-05-06 17:44:44.283371"], ["updated_at", "2016-05-06 17:44:44.283371"]]
   [1m[35m (1.0ms)[0m  commit transaction
 Completed 200 OK in 23ms (Views: 0.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-07 15:12:04 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/takahashiseiji/src/github.com/timakin/uucounter/vendor/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2016-05-07 15:14:23 +0900
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 407ms (Views: 401.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-05-07 15:14:26 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/uuc_tracks" for ::1 at 2016-05-07 15:14:27 +0900
+Processing by UuCounter::TracksController#create as */*
+  [1m[35mUuCounter::Track Load (0.7ms)[0m  SELECT  "uu_counter_tracks".* FROM "uu_counter_tracks" WHERE "uu_counter_tracks"."uuid" = ? AND "uu_counter_tracks"."path" = ? LIMIT 1  [["uuid", "e2b92b682edd16d72c6e5e5f"], ["path", "/uuc_tracks"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "uu_counter_tracks" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-05-07 06:14:27.112162"], ["updated_at", "2016-05-07 06:14:27.112162"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-05-07 15:26:13 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 210ms (Views: 193.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 15:26:14 +0900
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 15:26:14 +0900
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 15:26:14 +0900
+
+
+Started GET "/assets/posts.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-05-07 15:26:14 +0900
+
+
+Started GET "/assets/uu_counter/tracks.self-065aa2bdf49439f573a88e8add010ea242a72484c8dd15609b628d923948b6fa.js?body=1" for ::1 at 2016-05-07 15:26:14 +0900
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-05-07 15:26:14 +0900
+
+
+Started GET "/assets/posts.self-3ab5990cd3a310b048ee0d9861c44bc05993d05e0b5a3d892da0a67199b30840.js?body=1" for ::1 at 2016-05-07 15:26:14 +0900
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-07 15:26:14 +0900
+
+
+Started POST "/uuc_tracks" for ::1 at 2016-05-07 15:26:14 +0900
+Processing by UuCounter::TracksController#create as */*
+  [1m[36mUuCounter::Track Load (0.3ms)[0m  [1mSELECT  "uu_counter_tracks".* FROM "uu_counter_tracks" WHERE "uu_counter_tracks"."uuid" = ? AND "uu_counter_tracks"."path" = ? LIMIT 1[0m  [["uuid", "e2b92b682edd16d72c6e5e5f"], ["path", "/uuc_tracks"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "uu_counter_tracks" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-05-07 06:26:14.460108"], ["updated_at", "2016-05-07 06:26:14.460108"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-05-07 15:28:42 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 103ms (Views: 45.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-05-07 15:28:42 +0900
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 15:28:42 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 15:28:43 +0900
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 15:28:43 +0900
+
+
+Started GET "/assets/uu_counter/tracks.self-065aa2bdf49439f573a88e8add010ea242a72484c8dd15609b628d923948b6fa.js?body=1" for ::1 at 2016-05-07 15:28:43 +0900
+
+
+Started GET "/assets/posts.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-05-07 15:28:43 +0900
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-07 15:28:43 +0900
+
+
+Started GET "/assets/posts.self-3ab5990cd3a310b048ee0d9861c44bc05993d05e0b5a3d892da0a67199b30840.js?body=1" for ::1 at 2016-05-07 15:28:43 +0900
+
+
+Started POST "/uuc_tracks" for ::1 at 2016-05-07 15:28:43 +0900
+
+SyntaxError (/Users/takahashiseiji/src/github.com/timakin/uucounter/app/controllers/uu_counter/tracks_controller.rb:21: syntax error, unexpected keyword_else, expecting keyword_end):
+  /Users/takahashiseiji/src/github.com/timakin/uucounter/app/controllers/uu_counter/tracks_controller.rb:21: syntax error, unexpected keyword_else, expecting keyword_end
+  activesupport (4.2.6) lib/active_support/dependencies.rb:457:in `load'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:457:in `block in load_file'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:647:in `new_constants_in'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:456:in `load_file'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:354:in `require_or_load'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:494:in `load_missing_constant'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:263:in `const_get'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:263:in `block in constantize'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/takahashiseiji/src/github.com/timakin/uucounter/vendor/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/takahashiseiji/src/github.com/timakin/uucounter/vendor/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.3ms)
+  Rendered /Users/takahashiseiji/src/github.com/timakin/uucounter/vendor/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (25.1ms)
+  Rendered /Users/takahashiseiji/src/github.com/timakin/uucounter/vendor/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (127.6ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-05-07 15:29:04 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 50ms (Views: 36.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-05-07 15:29:04 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 15:29:04 +0900
+
+
+Started GET "/assets/posts.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-05-07 15:29:04 +0900
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 15:29:04 +0900
+
+
+Started GET "/assets/uu_counter/tracks.self-065aa2bdf49439f573a88e8add010ea242a72484c8dd15609b628d923948b6fa.js?body=1" for ::1 at 2016-05-07 15:29:04 +0900
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 15:29:04 +0900
+
+
+Started GET "/assets/posts.self-3ab5990cd3a310b048ee0d9861c44bc05993d05e0b5a3d892da0a67199b30840.js?body=1" for ::1 at 2016-05-07 15:29:04 +0900
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-07 15:29:04 +0900
+
+
+Started POST "/uuc_tracks" for ::1 at 2016-05-07 15:29:04 +0900
+Processing by UuCounter::TracksController#create as */*
+  [1m[36mUuCounter::Track Load (0.2ms)[0m  [1mSELECT  "uu_counter_tracks".* FROM "uu_counter_tracks" WHERE "uu_counter_tracks"."uuid" = ? AND "uu_counter_tracks"."path" = ? LIMIT 1[0m  [["uuid", "e2b92b682edd16d72c6e5e5f"], ["path", "/uuc_tracks"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "uu_counter_tracks" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-05-07 06:29:04.959850"], ["updated_at", "2016-05-07 06:29:04.959850"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/1" for ::1 at 2016-05-07 15:29:13 +0900
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-05-07 15:29:13 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 15:29:13 +0900
+
+
+Started GET "/assets/uu_counter/tracks.self-065aa2bdf49439f573a88e8add010ea242a72484c8dd15609b628d923948b6fa.js?body=1" for ::1 at 2016-05-07 15:29:13 +0900
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 15:29:13 +0900
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 15:29:13 +0900
+
+
+Started GET "/assets/posts.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-05-07 15:29:13 +0900
+
+
+Started GET "/assets/posts.self-3ab5990cd3a310b048ee0d9861c44bc05993d05e0b5a3d892da0a67199b30840.js?body=1" for ::1 at 2016-05-07 15:29:13 +0900
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-05-07 15:29:13 +0900
+
+
+Started POST "/uuc_tracks" for ::1 at 2016-05-07 15:29:13 +0900
+Processing by UuCounter::TracksController#create as */*
+  [1m[35mUuCounter::Track Load (0.1ms)[0m  SELECT  "uu_counter_tracks".* FROM "uu_counter_tracks" WHERE "uu_counter_tracks"."uuid" = ? AND "uu_counter_tracks"."path" = ? LIMIT 1  [["uuid", "e2b92b682edd16d72c6e5e5f"], ["path", "/uuc_tracks"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "uu_counter_tracks" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-05-07 06:29:13.339428"], ["updated_at", "2016-05-07 06:29:13.339428"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.5ms)
